@@ -34,7 +34,7 @@ Uma prévia das principais funcionalidades do **StudyGotchi**:
 
 Uma prévia da interface principal do **StudyGotchi**, mostrando o mascote virtual, indicadores de estudo, descanso e felicidade, e os botões de interação.
 
-<img src="/public/tamagotchi.jpg" alt="Tela principal do StudyGotchi" width="600"/>
+<img src="/public/tamagotchi.jpg" alt="Tela principal do StudyGotchi" width="400"/>
 
 ## 📝 Próximos Passos
 
