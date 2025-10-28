@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pixelify+Sans:wght@400..700&display=swap');
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background: linear-gradient(135deg, #f9f9fc, #e6f0ff);
+    color: #6b7280;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+    color: #374151;
+    font-size: 24px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.duck {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    font-size: 24px;
+}
+
+.pet-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pet-status,
+.buttons-controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pet-status {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pet-status-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
