@@ -49,7 +49,7 @@ function App() {
     if (isStudying) {
       const startTime = Date.now();
       const initialStudy = petStatus.study;
-      const totalDuration = 6 * 1000;
+      const totalDuration = 3600 * 1000;
 
       const interval = setInterval(() => {
         const elapsedTime = Date.now() - startTime;
