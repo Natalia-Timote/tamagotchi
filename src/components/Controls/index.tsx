@@ -1,10 +1,3 @@
-export const restPet = (prevPetStatus) => {
-    return {
-        ...prevPetStatus,
-        rest: prevPetStatus.rest < 100 ? prevPetStatus.rest + 10 : 100
-    }
-}
-
 export const happyPet = (prevPetStatus) => {
     return {
         ...prevPetStatus,
@@ -14,6 +7,5 @@ export const happyPet = (prevPetStatus) => {
 
 
 export default {
-    restPet,
     happyPet
 }

@@ -15,10 +15,16 @@ main {
     font-family: "Josefin Sans", sans-serif;
 }
 
-h1 {
+h1,
+h2 {
     color: #374151;
     font-size: 24px;
     font-family: "Pixelify Sans", sans-serif;
+}
+
+h3 {
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .duck {
