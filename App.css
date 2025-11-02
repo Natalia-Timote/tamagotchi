@@ -125,7 +125,7 @@ p {
 
 @media (min-width: 1200px) {
     main {
-        gap: 80px 240px;
         padding: 40px 400px 40px 400px;
+        margin: 40px 200px;
     }
 }
