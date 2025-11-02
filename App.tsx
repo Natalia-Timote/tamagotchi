@@ -26,6 +26,7 @@ function App() {
   const [isStudying, setIsStudying] = useState(false);
   const [isOnPause, setIsOnPause] = useState(false);
   const [isHavingFun, setIsHavingFun] = useState(true);
+  const [duckImage, setDuckImage] = useState("/duck-images/duck-very-happy.png");
 
   useEffect(() => {
     if (petStatus.study === 100) {
@@ -57,6 +58,7 @@ function App() {
         if (progress >= 1) {
           clearInterval(interval);
           setIsStudying(false);
+          setDuckImage("/duck-images/duck-happy.png")
         }
 
       }, 1000)
@@ -83,6 +85,7 @@ function App() {
         if (progress >= 1) {
           clearInterval(interval);
           setIsHavingFun(true);
+          setDuckImage("/duck-images/duck-very-happy.png")
         }
       }, 1000)
       return () => clearInterval(interval);
@@ -108,7 +111,7 @@ function App() {
   return (
     <main>
       <h1>StudyGotchi</h1>
-      <img className='duck' src="/public/duck.png" alt="Patinho" />
+      <img className='duck' src={duckImage} alt="Patinho" />
       <section className='pet-infos'>
         <h2>{petStatus.name}</h2>
         <h3>{petLevel.careerLevel} - {petLevel.level}</h3>
@@ -123,32 +126,41 @@ function App() {
           <StatusBar statusVisual={{ width: `${petStatus.rest}%` }} />
         </div>
         <div className="pet-status-item">
-          <p>Felicidade:</p>
+          <p>Diversão:</p>
           <StatusBar statusVisual={{ width: `${petStatus.happiness}%` }} />
         </div>
       </section>
 
       <section className="buttons-controls">
         <Button control={() => {
-          if(petStatus.happiness >= 100) {
+          if (petStatus.happiness >= 100) {
             setPetStatus(prevPetStatus => ({ ...prevPetStatus, study: 0 }))
             setIsStudying(true)
+            setDuckImage("/duck-images/duck-studying.png")
           }
         }}>
           Estudar
         </Button>
         <Button control={() => {
           setIsOnPause(prev => !prev)
+          if (isOnPause === false) {
+            setDuckImage("/duck-images/duck-rest.png")
+          } else {
+            setDuckImage("/duck-images/duck-studying.png")
+          }
         }}>
           Descansar
         </Button>
         <Button control={() => {
-          setIsHavingFun(false);
+          if (petStatus.happiness < 100 && isStudying === false) {
+            setIsHavingFun(false);
+            setDuckImage("/duck-images/duck-fun.png")
+          }
         }}>
-          Divertir
+          Diversão
         </Button>
       </section>
-    </main>
+    </main >
   )
 }
 
