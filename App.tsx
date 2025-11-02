@@ -1,12 +1,14 @@
-import './reset.css'
-import './App.css'
-import Button from './src/components/Button/index.tsx'
-import StatusBar from './src/components/StatusBar/index.tsx'
-import { useEffect, useState } from 'react'
+import './reset.css';
+import './App.css';
+import Button from './src/components/Button/index.tsx';
+import StatusBar from './src/components/StatusBar/index.tsx';
+import { useEffect, useState } from 'react';
 import type IPetStatus from "./src/interfaces/IPetStatus.tsx";
-import type IPetLevel from './src/interfaces/IPetLevel.tsx'
-import UpdatePetLevel from './src/components/UpdatePetLevel/index.tsx'
-import UpdatePetCareerLevel from './src/components/UpdatePetCareerLevel/index.tsx'
+import type IPetLevel from './src/interfaces/IPetLevel.tsx';
+import UpdatePetLevel from './src/components/UpdatePetLevel/index.tsx';
+import UpdatePetCareerLevel from './src/components/UpdatePetCareerLevel/index.tsx';
+import { FaCode } from "react-icons/fa";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 function App() {
   const initialPet = {
@@ -109,58 +111,70 @@ function App() {
   }, [isOnPause])
 
   return (
-    <main>
-      <h1>StudyGotchi</h1>
-      <section className='pet-infos'>
-        <img className='duck' src={duckImage} alt="Patinho" />
-        <h2>{petStatus.name}</h2>
-        <h3>{petLevel.careerLevel} - {petLevel.level}</h3>
-      </section>
-      <section className="pet-status">
-        <div className="pet-status-item">
-          <p>Estudo diário:</p>
-          <StatusBar statusVisual={{ width: `${petStatus.study}%` }} />
-        </div>
-        <div className="pet-status-item">
-          <p>Descanso:</p>
-          <StatusBar statusVisual={{ width: `${petStatus.rest}%` }} />
-        </div>
-        <div className="pet-status-item">
-          <p>Diversão:</p>
-          <StatusBar statusVisual={{ width: `${petStatus.happiness}%` }} />
-        </div>
-      </section>
+    <body>
+      <main>
+        <h1>StudyGotchi</h1>
+        <section className='pet-infos'>
+          <img className='duck' src={duckImage} alt="Patinho" />
+          <h2>{petStatus.name}</h2>
+          <h3>{petLevel.careerLevel} - {petLevel.level}</h3>
+        </section>
+        <section className="pet-status">
+          <div className="pet-status-item">
+            <p>Estudo diário:</p>
+            <StatusBar statusVisual={{ width: `${petStatus.study}%` }} />
+          </div>
+          <div className="pet-status-item">
+            <p>Descanso:</p>
+            <StatusBar statusVisual={{ width: `${petStatus.rest}%` }} />
+          </div>
+          <div className="pet-status-item">
+            <p>Diversão:</p>
+            <StatusBar statusVisual={{ width: `${petStatus.happiness}%` }} />
+          </div>
+        </section>
 
-      <section className="buttons-controls">
-        <Button control={() => {
-          if (petStatus.happiness >= 100) {
-            setPetStatus(prevPetStatus => ({ ...prevPetStatus, study: 0 }))
-            setIsStudying(true)
-            setDuckImage("/duck-images/duck-studying.png")
-          }
-        }}>
-          Estudar
-        </Button>
-        <Button control={() => {
-          setIsOnPause(prev => !prev)
-          if (isOnPause === false) {
-            setDuckImage("/duck-images/duck-rest.png")
-          } else {
-            setDuckImage("/duck-images/duck-studying.png")
-          }
-        }}>
-          Descansar
-        </Button>
-        <Button control={() => {
-          if (petStatus.happiness < 100 && isStudying === false) {
-            setIsHavingFun(false);
-            setDuckImage("/duck-images/duck-fun.png")
-          }
-        }}>
-          Diversão
-        </Button>
-      </section>
-    </main >
+        <section className="buttons-controls">
+          <Button control={() => {
+            if (petStatus.happiness >= 100) {
+              setPetStatus(prevPetStatus => ({ ...prevPetStatus, study: 0 }))
+              setIsStudying(true)
+              setDuckImage("/duck-images/duck-studying.png")
+            }
+          }}>
+            Estudar
+          </Button>
+          <Button control={() => {
+            setIsOnPause(prev => !prev)
+            if (isOnPause === false) {
+              setDuckImage("/duck-images/duck-rest.png")
+            } else {
+              setDuckImage("/duck-images/duck-studying.png")
+            }
+          }}>
+            Descansar
+          </Button>
+          <Button control={() => {
+            if (petStatus.happiness < 100 && isStudying === false) {
+              setIsHavingFun(false);
+              setDuckImage("/duck-images/duck-fun.png")
+            }
+          }}>
+            Diversão
+          </Button>
+        </section>
+      </main >
+      <footer>
+        <p>Desenvolvido por Natalia Mirian Timote</p>
+        <p className="footer-infos">Siga minha jornada, conheça mais sobre minha trajetória no LinkedIn ou confira meus projetos no GitHub!</p>
+        <div>
+          <a href="https://www.linkedin.com/in/nataliamiriantimote" target='_blank'><SiLinkedin /></a>
+          <a href="https://www.github.com/Natalia-Timote" target='_blank'><SiGithub /></a>
+        </div>
+        <p className="footer-infos">Quer ver como tudo isso foi feito? Acesse o código completo deste projeto no GitHub!</p>
+        <a href="https://github.com/Natalia-Timote/tamagotchi" target='_blank'><FaCode /></a>
+      </footer>
+    </body>
   )
 }
 
