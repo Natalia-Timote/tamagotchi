@@ -1,13 +1,26 @@
 .button-controls {
     text-transform: uppercase;
     background: linear-gradient(135deg, #fcd34d, #f472b6);
-    color: #000;
+    color: #333;
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .button-controls:hover {
     background-color: #FFD93D;
+}
+
+@media (max-width: 380px) {
+    .button-controls {
+        width: 140px;
+    }
+}
+
+@media (min-width: 768px) {
+    .button-controls {
+        font-size: 24px;
+    }
 }

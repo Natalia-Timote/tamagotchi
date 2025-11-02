@@ -111,8 +111,8 @@ function App() {
   return (
     <main>
       <h1>StudyGotchi</h1>
-      <img className='duck' src={duckImage} alt="Patinho" />
       <section className='pet-infos'>
+        <img className='duck' src={duckImage} alt="Patinho" />
         <h2>{petStatus.name}</h2>
         <h3>{petLevel.careerLevel} - {petLevel.level}</h3>
       </section>

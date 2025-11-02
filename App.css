@@ -6,7 +6,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 40px;
     background: linear-gradient(135deg, #f9f9fc, #e6f0ff);
     color: #6b7280;
     padding: 24px;
@@ -15,10 +15,15 @@ main {
     font-family: "Josefin Sans", sans-serif;
 }
 
-h1,
+h1 {
+    color: #374151;
+    font-size: 40px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
 h2 {
     color: #374151;
-    font-size: 24px;
+    font-size: 32px;
     font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -27,9 +32,13 @@ h3 {
     font-family: "Josefin Sans", sans-serif;
 }
 
+p {
+    font-size: 16px;
+}
+
 .duck {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 8px;
     font-size: 24px;
 }
@@ -50,11 +59,72 @@ h3 {
 
 .pet-status {
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
 }
 
 .pet-status-item {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+@media (max-width: 380px) {
+    .buttons-controls {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "pet status"
+            "buttons buttons";
+        padding: 80px 240px 80px 240px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 80px;
+    }
+
+    .duck {
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 64px;
+        grid-area: title;
+    }
+
+    h2 {
+        font-size: 56px;
+    }
+
+    h3, 
+    p {
+        font-size: 40px;
+    }
+
+    .pet-infos {
+        grid-area: pet;
+    }
+
+    .pet-status {
+        grid-area: status;
+    }
+
+    .buttons-controls {
+        grid-area: buttons;
+        gap: 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        gap: 80px 240px;
+    }
 }
