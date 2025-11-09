@@ -170,7 +170,7 @@ function App() {
           <img className='modal-image' src="/level-up.jpg" alt="Console com a mensagem de level up. Em volta há confetes em comemoração." />
           <h2>Parabéns!</h2>
           <p>Você subiu para o nível {petLevel.level}!</p>
-          <p>Você é um {petLevel.careerLevel}.</p>
+          <p>Carreira: {petLevel.careerLevel}</p>
         </Modal>
       </main >
       <footer>
