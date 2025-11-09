@@ -9,6 +9,7 @@ import UpdatePetLevel from './src/components/UpdatePetLevel/index.tsx';
 import UpdatePetCareerLevel from './src/components/UpdatePetCareerLevel/index.tsx';
 import { FaCode } from "react-icons/fa";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import Modal from './src/components/Modal/index.tsx';
 
 function App() {
   const initialPet = {
@@ -29,10 +30,12 @@ function App() {
   const [isOnPause, setIsOnPause] = useState(false);
   const [isHavingFun, setIsHavingFun] = useState(true);
   const [duckImage, setDuckImage] = useState("/duck-images/duck-very-happy.png");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (petStatus.study === 100) {
       setPetLevel(prevPetLevel => UpdatePetLevel(prevPetLevel));
+      setIsModalOpen(true);
     }
   }, [petStatus.study])
 
@@ -163,6 +166,12 @@ function App() {
             Diversão
           </Button>
         </section>
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <img className='modal-image' src="/level-up.jpg" alt="Console com a mensagem de level up. Em volta há confetes em comemoração." />
+          <h2>Parabéns!</h2>
+          <p>Você subiu para o nível {petLevel.level}!</p>
+          <p>Você é um {petLevel.careerLevel}.</p>
+        </Modal>
       </main >
       <footer>
         <p>Desenvolvido por Natalia Mirian Timote</p>

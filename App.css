@@ -54,6 +54,7 @@ p {
 .pet-infos {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 8px;
 }
 
@@ -116,7 +117,8 @@ footer div {
             "title title"
             "pet status"
             "buttons buttons";
-        padding: 40px 240px 40px 240px;
+        margin: 0 auto;
+        padding: 40px;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -158,7 +160,7 @@ footer div {
 
 @media (min-width: 1200px) {
     main {
-        padding: 40px 400px 40px 400px;
-        margin: 40px 200px;
+        padding: 40px;
+        margin: 0 auto;
     }
 }
