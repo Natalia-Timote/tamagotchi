@@ -34,7 +34,19 @@ Uma prévia das principais funcionalidades do **StudyGotchi**:
 
 Uma prévia da interface principal do **StudyGotchi**, mostrando o mascote virtual, indicadores de estudo, descanso e felicidade, e os botões de interação.
 
-<img src="/public/tamagotchi.jpg" alt="Tela principal do StudyGotchi" width="400"/>
+<img src="/public/studygotchi.png" alt="Tela principal do StudyGotchi" width="400"/>
+
+**💻 Responsividade para Desktop**
+
+Visualização adaptada para telas maiores, com layout otimizado, melhor distribuição dos elementos e aproveitamento do espaço para uma experiência mais fluida no navegador.
+
+<img src="/public/studygotchi-desktop.png" alt="Versão desktop do StudyGotchi" width="600"/>
+
+**🌟 Tela de Up Level**
+
+Tela que exibe o momento de evolução do mascote, celebrando o progresso do usuário após alcançar metas de estudo e equilíbrio entre descanso e diversão.
+
+<img src="/public/studygotchi-level-up.png" alt="Tela de nível aprimorado do mascote" width="300"/>
 
 ## 📝 Próximos Passos
 
