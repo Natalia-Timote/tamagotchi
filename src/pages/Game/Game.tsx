@@ -1,13 +1,14 @@
-import '../../reset.css';
-import '../../App.css';
-import Button from '../components/Button/index.tsx';
-import StatusBar from '../components/StatusBar/index.tsx';
+import '../../../reset.css';
+import '../../../App.css';
+import './Game.css';
+import Button from '../../components/Button/index.tsx';
+import StatusBar from '../../components/StatusBar/index.tsx';
 import { useEffect, useState } from 'react';
-import type IPetStatus from "../interfaces/IPetStatus.tsx";
-import type IPetLevel from '../interfaces/IPetLevel.tsx';
-import UpdatePetLevel from '../components/UpdatePetLevel/index.tsx';
-import UpdatePetCareerLevel from '../components/UpdatePetCareerLevel/index.tsx';
-import Modal from '../components/Modal/index.tsx';
+import type IPetStatus from "../../interfaces/IPetStatus.tsx";
+import type IPetLevel from '../../interfaces/IPetLevel.tsx';
+import UpdatePetLevel from '../../components/UpdatePetLevel/index.tsx';
+import UpdatePetCareerLevel from '../../components/UpdatePetCareerLevel/index.tsx';
+import Modal from '../../components/Modal/index.tsx';
 
 export default function Game() {
     const initialPet = {
@@ -112,7 +113,7 @@ export default function Game() {
     }, [isOnPause])
 
     return (
-        <>
+        <section className='game'>
             <h1>StudyGotchi</h1>
             <section className='pet-infos'>
                 <img className='duck' src={duckImage} alt="Patinho" />
@@ -169,6 +170,6 @@ export default function Game() {
                 <p>Você subiu para o nível {petLevel.level}!</p>
                 <p>Carreira: {petLevel.careerLevel}</p>
             </Modal>
-        </>
+        </section>
     )
 }

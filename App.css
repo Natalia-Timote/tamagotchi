@@ -9,19 +9,6 @@ body {
     justify-content: center;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 24px;
-    gap: 40px;
-    border-radius: 16px;
-    text-align: center;
-    font-family: "Josefin Sans", sans-serif;
-}
-
 h1 {
     color: #374151;
     font-size: 40px;
@@ -44,92 +31,7 @@ p {
     font-family: "Josefin Sans", sans-serif;
 }
 
-.duck {
-    width: 200px;
-    height: 200px;
-    border-radius: 8px;
-    font-size: 24px;
-}
-
-.pet-infos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.pet-status,
-.buttons-controls {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-}
-
-.pet-status {
-    flex-direction: column;
-    gap: 24px;
-}
-
-.pet-status-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-footer {
-    padding: 16px 40px;
-    font-size: 16px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: auto;
-}
-
-.footer-infos {
-    font-size: 12px;
-}
-
-.footer-infos a {
-    cursor: pointer;
-}
-
-footer div {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 380px) {
-    .buttons-controls {
-        flex-direction: column;
-    }
-}
-
 @media (min-width: 768px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "title title"
-            "pet status"
-            "buttons buttons";
-        margin: 0 auto;
-        padding: 40px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 24px 80px;
-    }
-
-    .duck {
-        width: 240px;
-        height: 240px;
-    }
-
     h1 {
         font-size: 56px;
         grid-area: title;
@@ -142,25 +44,5 @@ footer div {
     h3,
     p {
         font-size: 32px;
-    }
-
-    .pet-infos {
-        grid-area: pet;
-    }
-
-    .pet-status {
-        grid-area: status;
-    }
-
-    .buttons-controls {
-        grid-area: buttons;
-        gap: 32px;
-    }
-}
-
-@media (min-width: 1200px) {
-    main {
-        padding: 40px;
-        margin: 0 auto;
     }
 }
