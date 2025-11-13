@@ -1,0 +1,25 @@
+
+footer {
+    padding: 16px 40px;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+}
+
+.footer-infos {
+    font-size: 12px;
+}
+
+.footer-infos a {
+    cursor: pointer;
+}
+
+footer div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}

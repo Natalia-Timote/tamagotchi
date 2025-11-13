@@ -2,7 +2,7 @@ import './reset.css';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Home from './src/pages/Home/Home';
-import Layout from './src/pages/Layout';
+import Layout from './src/pages/Layout/Layout';
 import Game from './src/pages/Game/Game';
 
 

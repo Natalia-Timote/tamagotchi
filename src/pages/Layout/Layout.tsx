@@ -1,3 +1,4 @@
+import "./Layout.css";
 import { FaCode } from "react-icons/fa";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { Outlet } from "react-router";
