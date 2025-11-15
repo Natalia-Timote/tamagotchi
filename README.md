@@ -42,6 +42,12 @@ Visualização adaptada para telas maiores, com layout otimizado, melhor distrib
 
 <img src="/public/studygotchi-desktop.png" alt="Versão desktop do StudyGotchi" width="600"/>
 
+**👾 Tela de Seleção de Personagem**
+
+A tela inicial oferece espaço para o usuário digitar o nome de seu mascote virtual e escolher entre 4 opções de personagens, tornando o início da jornada ainda mais personalizado e divertido.
+
+<img src="/public/studygotchi-home.png" alt="Tela inicial com campo de nome e seleção de personagem" width="600"/>
+
 **🌟 Tela de Up Level**
 
 Tela que exibe o momento de evolução do mascote, celebrando o progresso do usuário após alcançar metas de estudo e equilíbrio entre descanso e diversão.
