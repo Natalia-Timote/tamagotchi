@@ -54,16 +54,13 @@
     .game {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr fr fr fr;
         grid-template-areas:
             "title title"
             "pet status"
             "buttons buttons";
         margin: 0 auto;
         padding: 40px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         gap: 24px 80px;
     }
 
