@@ -61,6 +61,4 @@ Tela que exibe o momento de evolução do mascote, celebrando o progresso do usu
 
 ## 📝 Próximos Passos
 
-- Adicionar personalização do mascote;
 - Salvar progresso do usuário localmente ou em backend;
-- Melhorar animações e interatividade.
