@@ -42,6 +42,11 @@ Visualização adaptada para telas maiores, com layout otimizado, melhor distrib
 
 <img src="/public/studygotchi-desktop.png" alt="Versão desktop do StudyGotchi" width="600"/>
 
+**❓ Tela de Como Jogar**
+
+A tela de instruções mostra os passos essenciais para começar no StudyGotchi: primeiro, aproveite o momento de lazer para desbloquear o estudo; depois, inicie sua sessão monitorada de aprendizado e acompanhe o progresso pelas barras de status. Cuide do seu mascote equilibrando dedicação aos estudos e pausas de diversão ao longo da sua rotina.
+<img src="/public/how-to-play-modal.jpg" alt="Tela modal com dicas sobre como jogar e instruções básicas" width="400"/>
+
 **👾 Tela de Seleção de Personagem**
 
 A tela inicial oferece espaço para o usuário digitar o nome de seu mascote virtual e escolher entre 4 opções de personagens, tornando o início da jornada ainda mais personalizado e divertido.
