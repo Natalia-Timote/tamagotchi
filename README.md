@@ -45,7 +45,8 @@ Visualização adaptada para telas maiores, com layout otimizado, melhor distrib
 **❓ Tela de Como Jogar**
 
 A tela de instruções mostra os passos essenciais para começar no StudyGotchi: primeiro, aproveite o momento de lazer para desbloquear o estudo; depois, inicie sua sessão monitorada de aprendizado e acompanhe o progresso pelas barras de status. Cuide do seu mascote equilibrando dedicação aos estudos e pausas de diversão ao longo da sua rotina.
-<img src="/public/how-to-play-modal.jpg" alt="Tela modal com dicas sobre como jogar e instruções básicas" width="400"/>
+
+<img src="/public/studygotchi-play.png" alt="Tela com instruções básicas de como jogar" width="400"/>
 
 **👾 Tela de Seleção de Personagem**
 
