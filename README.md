@@ -61,4 +61,4 @@ Tela que exibe o momento de evolução do mascote, celebrando o progresso do usu
 
 ## 📝 Próximos Passos
 
-- Salvar progresso do usuário localmente ou em backend;
+- Salvar progresso do usuário localmente ou em backend.
