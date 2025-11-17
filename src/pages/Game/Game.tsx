@@ -9,10 +9,13 @@ import type IPetLevel from '../../interfaces/IPetLevel.tsx';
 import UpdatePetLevel from '../../components/UpdatePetLevel/index.tsx';
 import UpdatePetCareerLevel from '../../components/UpdatePetCareerLevel/index.tsx';
 import Modal from '../../components/Modal/index.tsx';
+import { useStudygotchi } from '../../Context/StudygotchiContext.tsx';
 
 export default function Game() {
+    const { characterName, characterSelect } = useStudygotchi();
+
     const initialPet = {
-        name: "Marvel",
+        name: characterName,
         study: 0,
         rest: 0,
         happiness: 100
@@ -28,7 +31,7 @@ export default function Game() {
     const [isStudying, setIsStudying] = useState(false);
     const [isOnPause, setIsOnPause] = useState(false);
     const [isHavingFun, setIsHavingFun] = useState(true);
-    const [duckImage, setDuckImage] = useState("/duck-images/duck-very-happy.png");
+    const [image, setImage] = useState(`/${characterSelect}-images/${characterSelect}-very-happy.png`);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
@@ -62,7 +65,7 @@ export default function Game() {
                 if (progress >= 1) {
                     clearInterval(interval);
                     setIsStudying(false);
-                    setDuckImage("/duck-images/duck-happy.png")
+                    setImage(`/${characterSelect}-images/${characterSelect}-happy.png`)
                 }
 
             }, 1000)
@@ -89,7 +92,7 @@ export default function Game() {
                 if (progress >= 1) {
                     clearInterval(interval);
                     setIsHavingFun(true);
-                    setDuckImage("/duck-images/duck-very-happy.png")
+                    setImage(`/${characterSelect}-images/${characterSelect}-very-happy.png`)
                 }
             }, 1000)
             return () => clearInterval(interval);
@@ -116,7 +119,7 @@ export default function Game() {
         <section className='game'>
             <h1>StudyGotchi</h1>
             <section className='pet-infos'>
-                <img className='duck' src={duckImage} alt="Patinho" />
+                <img className='pet-image' src={image} alt={characterSelect} />
                 <h2>{petStatus.name}</h2>
                 <h3>{petLevel.careerLevel} - {petLevel.level}</h3>
             </section>
@@ -140,7 +143,7 @@ export default function Game() {
                     if (petStatus.happiness >= 100) {
                         setPetStatus(prevPetStatus => ({ ...prevPetStatus, study: 0 }))
                         setIsStudying(true)
-                        setDuckImage("/duck-images/duck-studying.png")
+                        setImage(`/${characterSelect}-images/${characterSelect}-studying.png`)
                     }
                 }}>
                     Estudar
@@ -148,9 +151,9 @@ export default function Game() {
                 <Button control={() => {
                     setIsOnPause(prev => !prev)
                     if (isOnPause === false) {
-                        setDuckImage("/duck-images/duck-rest.png")
+                        setImage(`/${characterSelect}-images/${characterSelect}-rest.png`)
                     } else {
-                        setDuckImage("/duck-images/duck-studying.png")
+                        setImage(`/${characterSelect}-images/${characterSelect}-studying.png`)
                     }
                 }}>
                     Descansar
@@ -158,7 +161,7 @@ export default function Game() {
                 <Button control={() => {
                     if (petStatus.happiness < 100 && isStudying === false) {
                         setIsHavingFun(false);
-                        setDuckImage("/duck-images/duck-fun.png")
+                        setImage(`/${characterSelect}-images/${characterSelect}-fun.png`)
                     }
                 }}>
                     Diversão

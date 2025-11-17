@@ -1,4 +1,4 @@
-import { createContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
 interface StudygotchiContextType {
     characterName: string,
@@ -18,4 +18,8 @@ export default function StudygotchiProvider({ children }: { children: ReactNode 
             {children}
         </StudygotchiContext.Provider>
     )
+}
+
+export function useStudygotchi() {
+    return useContext(StudygotchiContext);
 }
