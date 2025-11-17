@@ -1,4 +1,6 @@
-export default function UpdatePetCareerLevel(prevPetLevel) {
+import type IPetLevel from "../../interfaces/IPetLevel"
+
+export default function UpdatePetCareerLevel(prevPetLevel: IPetLevel) {
     function updateCareer() {
         if (prevPetLevel.level >= 12) {
             return (

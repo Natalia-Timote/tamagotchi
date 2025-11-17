@@ -1,7 +1,13 @@
 import Button from "../Button";
 import "./Modal.css";
 
-export default function Modal({ isOpen, onClose, children }) {
+interface ModalProps {
+    isOpen: boolean,
+    onClose: () => void,
+    children: React.ReactNode
+}
+
+export default function Modal({ isOpen, onClose, children }: ModalProps) {
     if (!isOpen) {
         return (
             null
