@@ -1,13 +1,8 @@
 import { createContext, useContext, useState, type ReactNode } from "react";
+import type IStudygotchiContext from "../interfaces/IStudygotchiContext";
 
-interface StudygotchiContextType {
-    characterName: string,
-    setCharacterName: React.Dispatch<React.SetStateAction<string>>,
-    characterSelect: string,
-    setCharacterSelect: React.Dispatch<React.SetStateAction<string>>
-}
 
-const StudygotchiContext = createContext<StudygotchiContextType | null>(null);
+const StudygotchiContext = createContext<IStudygotchiContext | null>(null);
 
 export default function StudygotchiProvider({ children }: { children: ReactNode }) {
     const [characterName, setCharacterName] = useState("");
@@ -21,5 +16,11 @@ export default function StudygotchiProvider({ children }: { children: ReactNode 
 }
 
 export function useStudygotchi() {
-    return useContext(StudygotchiContext);
+    const context = useContext(StudygotchiContext);
+
+    if(!context) {
+        throw new Error("useStudygotchi deve ser usado dentro de StudygotchiProvider")
+    } else{
+        return context;
+    }
 }

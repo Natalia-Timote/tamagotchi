@@ -6,7 +6,7 @@ import { useStudygotchi } from "../../Context/StudygotchiContext";
 import Modal from "../../components/Modal";
 
 export default function Home() {
-    const { characterName, setCharacterName, characterSelect, setCharacterSelect } = useStudygotchi();
+    const { characterName, setCharacterName, setCharacterSelect } = useStudygotchi();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [error, setError] = useState("");
 
@@ -38,6 +38,7 @@ export default function Home() {
                         onChange={event => setCharacterName(event.target.value)}
                     />
                 </label>
+                {error && <p className="error-message">{error}</p>}
                 <div className="character-select">
                     <p>Escolha o seu personagem:</p>
                     <div className="characters">
@@ -64,12 +65,12 @@ export default function Home() {
                 </div>
             </form>
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                <h2>Bem-vindo ao StudyGotchi, seu companheiro de estudos!</h2> 
-                <p>Antes de começar a estudar, o StudyGotchi te convida para um momento especial de lazer de 15 minutos. Esse tempo serve para deixar você e seu personagem relaxados e prontos para aprender, trazendo leveza para a sua rotina.</p> 
-                <p>Com a energia renovada, você poderá iniciar uma sessão de estudo de 1 hora. O tempo será monitorado e seu progresso ficará registrado, tornando cada avanço motivo de orgulho tanto para você quanto para o seu StudyGotchi.</p> 
-                <p>Lembre-se: você pode pausar quando quiser. Sempre que voltar dos momentos de lazer, seu personagem estará feliz em acompanhar você em mais uma jornada de aprendizado!</p> 
+                <h2>Bem-vindo ao StudyGotchi, seu companheiro de estudos!</h2>
+                <p>Antes de começar a estudar, o StudyGotchi te convida para um momento especial de lazer de 15 minutos. Esse tempo serve para deixar você e seu personagem relaxados e prontos para aprender, trazendo leveza para a sua rotina.</p>
+                <p>Com a energia renovada, você poderá iniciar uma sessão de estudo de 1 hora. O tempo será monitorado e seu progresso ficará registrado, tornando cada avanço motivo de orgulho tanto para você quanto para o seu StudyGotchi.</p>
+                <p>Lembre-se: você pode pausar quando quiser. Sempre que voltar dos momentos de lazer, seu personagem estará feliz em acompanhar você em mais uma jornada de aprendizado!</p>
                 <p>Estude com dedicação, curta suas pausas e cuide do seu StudyGotchi. Ele está sempre aqui torcendo pelo seu sucesso!</p>
-             </Modal>
+            </Modal>
         </section>
     )
 }

@@ -64,6 +64,11 @@
     height: 240px;
 }
 
+.error-message {
+    font-size: 16px;
+    color: red;
+}
+
 @media (min-width: 768px) {
     .home {
         padding: 40px;
