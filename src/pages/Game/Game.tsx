@@ -34,7 +34,7 @@ export default function Game() {
     const [isHavingFun, setIsHavingFun] = useState(true);
     const [image, setImage] = useState(`/${characterSelect}-images/${characterSelect}-very-happy.png`);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [studyingDays, setStudyingDays] = useState<any>([]);
+    const [studyingDays, setStudyingDays] = useState<string[]>([]);
 
     useEffect(() => {
         if (petStatus.study === 100) {
