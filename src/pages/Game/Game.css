@@ -54,11 +54,12 @@
     .game {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr fr fr fr;
+        grid-template-rows: 0.5fr fr fr fr fr;
         grid-template-areas:
             "title title"
             "pet status"
-            "buttons buttons";
+            "buttons buttons"
+            "calendar calendar";
         margin: 0 auto;
         padding: 40px;
         gap: 24px 80px;
@@ -80,6 +81,13 @@
     .buttons-controls {
         grid-area: buttons;
         gap: 32px;
+    }
+
+    .calendar-container {
+        grid-area: calendar;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

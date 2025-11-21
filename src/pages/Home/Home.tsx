@@ -47,8 +47,8 @@ export default function Home() {
                                 key={character}
                                 control={() => {
                                     if (!characterName.trim()) {
-                                        setError("Por favor, preencha o nome do personagem!")
-                                        return
+                                        setError("Por favor, preencha o nome do personagem!");
+                                        return;
                                     } else {
                                         setError("");
                                         setCharacterSelect(character);

@@ -1,0 +1,13 @@
+.calendar {
+    margin: 40px;
+    background: linear-gradient(135deg, #EAF6FF, #F3E7FF);
+    color: #374151;
+    font-family: "Josefin Sans", sans-serif;
+    border: solid 1px #374151;
+    border-radius: 16px;
+}
+
+.studied-day {
+    background: linear-gradient(135deg, #fcd34d, #f472b6);
+    border-radius: 24px;
+}
