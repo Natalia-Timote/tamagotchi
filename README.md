@@ -30,6 +30,12 @@ O StudyGotchi foi criado para tornar o processo de estudo mais interativo e moti
 
 Uma prévia das principais funcionalidades do **StudyGotchi**:
 
+**🌐 Acesse o Projeto Online**
+
+O projeto está disponível para visualização na **Vercel**. Clique no link abaixo para acessar:
+
+<a href="https://studygotchi.vercel.app" target="_blank">![Static Badge](https://img.shields.io/badge/Vercel-project?style=for-the-badge&color=A91079)</a>
+
 **⭐ Interface**
 
 Uma prévia da interface principal do **StudyGotchi**, mostrando o mascote virtual, indicadores de estudo, descanso e felicidade, e os botões de interação.
