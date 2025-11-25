@@ -30,6 +30,12 @@ O StudyGotchi foi criado para tornar o processo de estudo mais interativo e moti
 
 Uma prévia das principais funcionalidades do **StudyGotchi**:
 
+**🌐 Acesse o Projeto Online**
+
+O projeto está disponível para visualização na **Vercel**. Clique no link abaixo para acessar:
+
+<a href="https://studygotchi.vercel.app" target="_blank">![Static Badge](https://img.shields.io/badge/Vercel-project?style=for-the-badge&color=A91079)</a>
+
 **⭐ Interface**
 
 Uma prévia da interface principal do **StudyGotchi**, mostrando o mascote virtual, indicadores de estudo, descanso e felicidade, e os botões de interação.
@@ -59,6 +65,12 @@ A tela inicial oferece espaço para o usuário digitar o nome de seu mascote vir
 Tela que exibe o momento de evolução do mascote, celebrando o progresso do usuário após alcançar metas de estudo e equilíbrio entre descanso e diversão.
 
 <img src="/public/studygotchi-level-up.png" alt="Tela de nível aprimorado do mascote" width="300"/>
+
+**📆 Calendário de Estudos**
+
+Calendário para registrar visualmente os dias estudados, destacando as datas em que o usuário cumpriu suas sessões, facilitando o acompanhamento de hábitos e a construção de uma rotina consistente de estudos.
+
+<img src="/public/studygotchi-calendar.png" alt="Calendário marcando os dias estudados e progresso de hábitos de estudo" width="400"/>
 
 ## 📝 Próximos Passos
 
