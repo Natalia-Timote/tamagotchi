@@ -11,7 +11,7 @@ export default function CalendarStudy({ studyingDays }: CalendarStudyProps) {
         <Calendar
             className="calendar"
             tileClassName={({ date }) =>
-                studyingDays.includes(date.toISOString().split("T")[0]) ? 'studied-day' : null
+                studyingDays.includes(date.toISOString().split("T")[0]) ? 'studied-day' : 'day'
             }
         ></Calendar>
     )

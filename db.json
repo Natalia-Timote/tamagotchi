@@ -1,0 +1,9 @@
+{
+    "pet": {
+        "careerLevel": "string",
+        "level": "number"
+    },
+    "calendar": {
+        "studyingDays": "string[]"
+    }
+}
