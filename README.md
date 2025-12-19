@@ -2,7 +2,7 @@
 
 O **StudyGotchi** é uma aplicação desenvolvida em **React** e **TypeScript**, inspirada nos clássicos Tamagotchis, mas com foco em ajudar nos estudos. O objetivo é criar um mascote virtual que incentiva o usuário a manter uma rotina equilibrada de **estudo, descanso e diversão**.
 
-![Static Badge](https://img.shields.io/badge/Em%20Desenvolvimento-label?style=for-the-badge&label=Status)
+![Static Badge](https://img.shields.io/badge/Conclu%C3%ADdo-label?style=for-the-badge&label=Status)
 
 <hr>
 
