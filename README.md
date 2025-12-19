@@ -71,7 +71,3 @@ Tela que exibe o momento de evolução do mascote, celebrando o progresso do usu
 Calendário para registrar visualmente os dias estudados, destacando as datas em que o usuário cumpriu suas sessões, facilitando o acompanhamento de hábitos e a construção de uma rotina consistente de estudos.
 
 <img src="/public/studygotchi-calendar.png" alt="Calendário marcando os dias estudados e progresso de hábitos de estudo" width="400"/>
-
-## 📝 Próximos Passos
-
-- Salvar progresso do usuário localmente ou em backend.
