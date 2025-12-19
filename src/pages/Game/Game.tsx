@@ -51,7 +51,7 @@ export default function Game() {
         if (isStudying) {
             const startTime = Date.now();
             const initialStudy = petStatus.study;
-            const totalDuration = 10 * 1000;
+            const totalDuration = 60 * 60 * 1000;
 
             const interval = setInterval(() => {
                 const elapsedTime = Date.now() - startTime;
@@ -88,7 +88,7 @@ export default function Game() {
         if (isHavingFun === false) {
             const startTime = Date.now();
             const initialTime = petStatus.happiness;
-            const totalDuration = 5 * 1000;
+            const totalDuration = 15 * 60 * 1000;
 
             const interval = setInterval(() => {
                 const elapsedTime = Date.now() - startTime;
